@@ -6,9 +6,6 @@ set colorcolumn=81
 set cursorcolumn
 
 
-
-colorscheme Tomorrow-Night
-
 if has('gui_macvim')
   macmenu File.New\ Tab key=<D-S-t>
   macmenu File.New\ Window key=<nop>
@@ -39,3 +36,6 @@ let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
 let g:NERDCommentEmptyLines = 1
 " Enable trimming of trailing whitespace when uncommenting
 let g:NERDTrimTrailingWhitespace = 1
+
+nnoremap <leader>. :CtrlPTag<cr>
+

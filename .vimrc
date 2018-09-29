@@ -4,10 +4,8 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
+"
+" " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'git://git.wincent.com/command-t.git'
@@ -28,11 +26,16 @@ Plugin 'junegunn/vim-easy-align'
 Plugin 'posva/vim-vue'
 Plugin 'pangloss/vim-javascript'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'vim-airline/vim-airline'
 Plugin 'flazz/vim-colorschemes'
-
-
-
+Plugin 'majutsushi/tagbar'
+Plugin 'ervandew/supertab'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'mattn/emmet-vim'
+Plugin 'scrooloose/syntastic'
+"Plugin 'valloric/youcompleteme'
+Plugin 'elzr/vim-json'
+Plugin 'cakebaker/scss-syntax.vim'
 call vundle#end()            " required
 
 colorscheme molokai
@@ -123,3 +126,10 @@ map <D-n> :NERDtree<CR>
 
 
 set directory=$HOME/.vim/tmp/
+
+set relativenumber
+
+" emmet
+let g:user_emmet_install_global = 1
+" autocmd FileType html,css EmmetInstall
+" let g:user_emmet_leader_key='<C-y>'
