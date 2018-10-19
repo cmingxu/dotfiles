@@ -29,8 +29,6 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
 "Plugin 'valloric/youcompleteme'
@@ -43,7 +41,7 @@ colorscheme molokai
 filetype plugin indent on    " required
 
 if has('gui_running') 
-	set guifont=Monaco:h22
+	set guifont=Monaco:h16
 endif
 
 "set mouse=                                      " disable mouse
@@ -132,4 +130,4 @@ set relativenumber
 " emmet
 let g:user_emmet_install_global = 1
 " autocmd FileType html,css EmmetInstall
-" let g:user_emmet_leader_key='<C-y>'
+let g:user_emmet_leader_key='<C-y>'
