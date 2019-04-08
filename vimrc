@@ -34,6 +34,10 @@ Plugin 'scrooloose/syntastic'
 "Plugin 'valloric/youcompleteme'
 Plugin 'elzr/vim-json'
 Plugin 'cakebaker/scss-syntax.vim'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
 call vundle#end()            " required
 
 colorscheme molokai
@@ -131,3 +135,8 @@ set relativenumber
 let g:user_emmet_install_global = 1
 " autocmd FileType html,css EmmetInstall
 let g:user_emmet_leader_key='<C-y>'
+
+let g:syntastic_javascript_checkers = ['eslint']
+
+let g:formatdef_eslint = '"SRC=eslint-temp-${RANDOM}.js; cat - >$SRC; eslint --fix $SRC >/dev/null 2>&1; cat $SRC | perl -pe \"chomp if eof\"; rm -f $SRC"'
+let g:formatters_javascript = ['eslint']

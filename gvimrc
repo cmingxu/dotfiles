@@ -1,6 +1,6 @@
 
 
-set guifont=Monaco:h16
+set guifont=Monaco:h20
 set relativenumber
 set colorcolumn=81
 set cursorcolumn
