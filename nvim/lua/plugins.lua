@@ -7,8 +7,7 @@ return require('packer').startup(function()
     'kyazdani42/nvim-tree.lua',
     requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
-    },
-    config = function() require'nvim-tree'.setup {} end
+    }
   }
 
   use {
@@ -59,6 +58,19 @@ return require('packer').startup(function()
   use 'tpope/vim-surround'
   use 'sunjon/shade.nvim'
   use 'kevinhwang91/rnvimr'
+
+  use 'junegunn/fzf'
+  use 'junegunn/fzf.vim'
+
+  use 'EdenEast/nightfox.nvim'
+  use {
+    'yamatsum/nvim-nonicons',
+    requires = {'kyazdani42/nvim-web-devicons'}
+  }
+
+  use 'majutsushi/tagbar'
+  use 'kyazdani42/nvim-web-devicons'
+  use 'ryanoasis/vim-devicons'
 end)
 
 

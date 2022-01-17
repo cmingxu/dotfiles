@@ -28,8 +28,6 @@ vim.o.termguicolors = true
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
-
-
 vim.g.border_style = "rounded"
 vim.g.markdown_fenced_languages = {
     "bash=sh",
@@ -109,7 +107,6 @@ require('telescope').load_extension 'fzf'
 
 
 
--- Treesitter configuration
 -- Parsers must be installed manually via :TSInstall
 require('nvim-treesitter.configs').setup {
   highlight = {
