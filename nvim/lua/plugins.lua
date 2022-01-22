@@ -71,6 +71,8 @@ return require('packer').startup(function()
   use 'majutsushi/tagbar'
   use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
+  use 'ahmedkhalf/lsp-rooter.nvim'
+  use 'liuchengxu/vim-which-key'
 end)
 
 
