@@ -38,19 +38,22 @@ cmp.setup.cmdline('/', {
 cmp.setup.cmdline(':', {
   sources = cmp.config.sources({
     { name = 'path' }
-  }, {
-    { name = 'cmdline' }
+  }, { { name = 'cmdline' }
   })
 })
+
+require("luasnip.loaders.from_snipmate").load()
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 local servers = { 'ccls', 'cmake', 'gopls', 'dockerls', 'bashls', 'clangd', 'pyright', 'tsserver' }
 for _, lsp in ipairs(servers) do
   require('lspconfig')[lsp].setup {
-    on_attach = on_attach,
+    on_attach = on_atach,
     capabilities = capabilities,
   }
 end
 
 
+
+require('luasnip').filetype_extend("typescriptreact", { "html" })

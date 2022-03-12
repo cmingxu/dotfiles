@@ -1,4 +1,3 @@
-
 return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
@@ -24,12 +23,10 @@ return require('packer').startup(function()
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use 'vijaymarupudi/nvim-fzf'
   use 'junegunn/fzf.vim'
-
-  use 'sunjon/shade.nvim'
+  use 'junegunn/fzf'
 
   use 'norcalli/nvim-colorizer.lua'
 
-  use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
 
   use 'hrsh7th/cmp-nvim-lsp'
@@ -52,15 +49,11 @@ return require('packer').startup(function()
   use 'ms-jpq/coq.thirdparty'
   use "rafamadriz/friendly-snippets"
 
-  use  "folke/which-key.nvim" 
+  use 'folke/which-key.nvim' 
   use 'shaeinst/roshnivim-cs'
   use 'glepnir/dashboard-nvim'
-  use 'tpope/vim-surround'
-  use 'sunjon/shade.nvim'
+  use 'tpope/vim-surround' use 'sunjon/shade.nvim'
   use 'kevinhwang91/rnvimr'
-
-  use 'junegunn/fzf'
-  use 'junegunn/fzf.vim'
 
   use 'EdenEast/nightfox.nvim'
   use {
@@ -72,7 +65,29 @@ return require('packer').startup(function()
   use 'kyazdani42/nvim-web-devicons'
   use 'ryanoasis/vim-devicons'
   use 'ahmedkhalf/lsp-rooter.nvim'
+  use 'airblade/vim-rooter'
   use 'liuchengxu/vim-which-key'
+
+  use 'mxw/vim-jsx'
+  use 'pangloss/vim-javascript'
+  use 'leafgarland/typescript-vim'
+  use 'peitalin/vim-jsx-typescript'
+  use 'w0rp/ale'
+  use 'MaxMEllon/vim-jsx-pretty'
+
+  use 'tpope/vim-fugitive'
+  use 'mattn/emmet-vim'
+  use 'morhetz/gruvbox'
+  use 'windwp/nvim-ts-autotag'
+
+  use {
+    'rmagatti/goto-preview',
+    config = function()
+      require('goto-preview').setup {}
+    end
+  }
+
+  use 'tpope/vim-rails'
 end)
 
 

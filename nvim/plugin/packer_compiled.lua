@@ -80,6 +80,11 @@ _G.packer_plugins = {
     path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ale = {
+    loaded = true,
+    path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/ale",
+    url = "https://github.com/w0rp/ale"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -125,6 +130,11 @@ _G.packer_plugins = {
     path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/dashboard-nvim",
     url = "https://github.com/glepnir/dashboard-nvim"
   },
+  ["emmet-vim"] = {
+    loaded = true,
+    path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -139,6 +149,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/fzf.vim",
     url = "https://github.com/junegunn/fzf.vim"
+  },
+  ["lsp-rooter.nvim"] = {
+    loaded = true,
+    path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/lsp-rooter.nvim",
+    url = "https://github.com/ahmedkhalf/lsp-rooter.nvim"
   },
   ["nightfox.nvim"] = {
     loaded = true,
@@ -176,7 +191,6 @@ _G.packer_plugins = {
     url = "https://github.com/yamatsum/nvim-nonicons"
   },
   ["nvim-tree.lua"] = {
-    config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0" },
     loaded = true,
     path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
@@ -221,6 +235,11 @@ _G.packer_plugins = {
     path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/shade.nvim",
     url = "https://github.com/sunjon/shade.nvim"
   },
+  tagbar = {
+    loaded = true,
+    path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/tagbar",
+    url = "https://github.com/majutsushi/tagbar"
+  },
   ["telescope-fzf-native.nvim"] = {
     loaded = true,
     path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim",
@@ -231,20 +250,55 @@ _G.packer_plugins = {
     path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["typescript-vim"] = {
+    loaded = true,
+    path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/typescript-vim",
+    url = "https://github.com/leafgarland/typescript-vim"
+  },
   ["vim-devicons"] = {
     loaded = true,
     path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/vim-devicons",
     url = "https://github.com/ryanoasis/vim-devicons"
+  },
+  ["vim-fugitive"] = {
+    loaded = true,
+    path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/vim-fugitive",
+    url = "https://github.com/tpope/vim-fugitive"
   },
   ["vim-go"] = {
     loaded = true,
     path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/vim-go",
     url = "https://github.com/fatih/vim-go"
   },
+  ["vim-javascript"] = {
+    loaded = true,
+    path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/vim-javascript",
+    url = "https://github.com/pangloss/vim-javascript"
+  },
+  ["vim-jsx"] = {
+    loaded = true,
+    path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/vim-jsx",
+    url = "https://github.com/mxw/vim-jsx"
+  },
+  ["vim-jsx-pretty"] = {
+    loaded = true,
+    path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/vim-jsx-pretty",
+    url = "https://github.com/MaxMEllon/vim-jsx-pretty"
+  },
+  ["vim-jsx-typescript"] = {
+    loaded = true,
+    path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/vim-jsx-typescript",
+    url = "https://github.com/peitalin/vim-jsx-typescript"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-which-key"] = {
+    loaded = true,
+    path = "/Users/xuchunming/.local/share/nvim/site/pack/packer/start/vim-which-key",
+    url = "https://github.com/liuchengxu/vim-which-key"
   },
   ["which-key.nvim"] = {
     loaded = true,
@@ -254,10 +308,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: nvim-tree.lua
-time([[Config for nvim-tree.lua]], true)
-try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
-time([[Config for nvim-tree.lua]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")
