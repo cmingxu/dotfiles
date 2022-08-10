@@ -86,8 +86,8 @@ return require('packer').startup(function()
       require('goto-preview').setup {}
     end
   }
-
   use 'tpope/vim-rails'
+  use 'wakatime/vim-wakatime'
 end)
 
 

@@ -31,12 +31,32 @@ Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
 Plugin 'mattn/emmet-vim'
 Plugin 'scrooloose/syntastic'
-"Plugin 'valloric/youcompleteme'
 Plugin 'elzr/vim-json'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'Chiel92/vim-autoformat'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'isRuslan/vim-es6'
+
+" For javascript
+Plugin 'maxmellon/vim-jsx-pretty'
+Plugin 'yuezk/vim-js'
+Plugin 'HerringtonDarkholme/yats.vim'
+
+Plugin 'SirVer/ultisnips'
+Plugin 'mlaursen/vim-react-snippets'
+
+
+" For typescript
+Plugin 'leafgarland/typescript-vim'
+Plugin 'peitalin/vim-jsx-typescript'
+
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = [
+  \ 'coc-tsserver'
+  \ ]
+
+
 
 call vundle#end()            " required
 
@@ -45,7 +65,7 @@ colorscheme molokai
 filetype plugin indent on    " required
 
 if has('gui_running') 
-	set guifont=Monaco:h16
+	set guifont=Monaco:h18
 endif
 
 "set mouse=                                      " disable mouse
@@ -133,10 +153,15 @@ set relativenumber
 
 " emmet
 let g:user_emmet_install_global = 1
-" autocmd FileType html,css EmmetInstall
-let g:user_emmet_leader_key='<C-y>'
+let g:user_emmet_expandabbr_key='<Tab>'
+imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
 
 let g:syntastic_javascript_checkers = ['eslint']
 
 let g:formatdef_eslint = '"SRC=eslint-temp-${RANDOM}.js; cat - >$SRC; eslint --fix $SRC >/dev/null 2>&1; cat $SRC | perl -pe \"chomp if eof\"; rm -f $SRC"'
 let g:formatters_javascript = ['eslint']
+
+let g:snipMate = { 'snippet_version' : 1 }
+
+" vim go
+let g:go_decls_includes = "func,type"

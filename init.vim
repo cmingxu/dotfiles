@@ -18,7 +18,7 @@ set termguicolors " this variable must be enabled for colors to be applied prope
 set encoding=UTF-8
 set winwidth=20
 set winminwidth=20
-set guifont=Hack\ Nerd\ Font\ Mono:h14
+set guifont=Hack\ Nerd\ Font\ Mono:h20
 set tabstop=2
 set shiftwidth=2
 
@@ -27,6 +27,7 @@ highlight NvimTreeFolderIcon guibg=blue
 
 colorscheme gruvbox
 set colorcolumn=80
+set background=light
 
 nnoremap <leader>f <cmd>lua require('telescope.builtin').find_files()<cr>
 nnoremap <leader>g <cmd>lua require('telescope.builtin').live_grep()<cr>
@@ -50,3 +51,13 @@ nnoremap gpi <cmd>lua require('goto-preview').goto_preview_implementation()<CR>
 nnoremap gP <cmd>lua require('goto-preview').close_all_win()<CR>
 " Only set if you have telescope installed
 nnoremap gpr <cmd>lua require('goto-preview').goto_preview_references()<CR>
+
+let g:ale_fixers = {
+      \   'javascript': [
+        \       'DoSomething',
+        \       'eslint',
+        \       {buffer, lines -> filter(lines, 'v:val !=~ ''^\s*//''')},
+        \   ],
+        \}
+
+

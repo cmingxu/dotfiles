@@ -42,7 +42,7 @@ cmp.setup.cmdline(':', {
   })
 })
 
-require("luasnip.loaders.from_snipmate").load()
+-- require("luasnip.loaders.from_snipmate").load()
 
 -- Setup lspconfig.
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
@@ -57,3 +57,4 @@ end
 
 
 require('luasnip').filetype_extend("typescriptreact", { "html" })
+-- require('luasnip').filetype_extend("javascript.jsx", { "html" })
